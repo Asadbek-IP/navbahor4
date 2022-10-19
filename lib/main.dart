@@ -30,7 +30,7 @@ class rasm extends StatefulWidget {
 
 class _rasmState extends State<rasm> {
   
- int? hozirgiIndex;
+ int? hozirgiIndex=0;
 
  List list = [
   HomePage(),
@@ -72,10 +72,10 @@ class _rasmState extends State<rasm> {
           ),
         ],
       ),
-      drawer: new Drawer(
-          child: new Drawer(
+      drawer:Drawer(
+          child: Drawer(
               // ignore: unnecessary_new
-              child: new ListView(
+              child:  ListView(
         children: [
           Container(
             child: Image.asset("assets/images/4.jpg"),
@@ -84,7 +84,7 @@ class _rasmState extends State<rasm> {
           // ignore: unnecessary_new
 
           new ListTile(
-            title: new Text("Navbahor tarixi"),
+            title: Text("Navbahor tarixi"),
             onTap: () {
               Route route = MaterialPageRoute(builder: (context) => page7());
               Navigator.push(context, route);
